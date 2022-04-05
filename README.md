@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 This dataset contains 264,960 transactions between block 270,000 (2013-11-16 22:09:06 UTC) and block 300,000 (2014-05-10 06:32:34 UTC), labeled by Blockstream.info’s method of CoinJoin detection and a method of SharedCoin detection. In this period SharedCoin is active.
 
@@ -6,15 +6,16 @@ In order to provide more relevant information, the dataset includes a large numb
 
 There are a total of 116,537,811 transactions in the dataset, all of which are real Bitcoin transactions, but the original TXIDs have been replaced with consecutive integers starting from 0 to 116,537,810.
 
-We have computed 15 features for each transaction and provided the ids of the precursor and successor transactions for these transactions..
+We have computed 15 features for each transaction and provided the ids of the precursor and successor transactions for these transactions.
 
-## Download Data
+# Download Data
 
 [Google Drive](https://drive.google.com/drive/folders/1srpyBEXbaDhLg5juEQh-I71IxUA3JYx1?usp=sharing)
 
 [Baidu Netdisk](https://pan.baidu.com/s/1CVTijokH1jr1uXx0tS2qBg)  (Access Code: `wnr5`)
 
-## File List
+## Tree Data
+
 
 | File             | Size   | Lines       | Description                                      | Format                                             |
 | ---------------- | ------ | ----------- | ------------------------------------------------ | -------------------------------------------------- |
@@ -28,7 +29,9 @@ There are 116,537,811 transactions in this dataset. The original TXID is removed
 
 In `tx_features.txt`, `tree_forward.txt` and `tree_back.txt`, the first line refers to the Transaction of ID 0, the second line refers to the ID 1 ....
 
-## Load Data
+
+
+### Load Data
 
 1. tree_forward.txt
 
@@ -79,5 +82,27 @@ In `tx_features.txt`, `tree_forward.txt` and `tree_back.txt`, the first line ref
            tx_features.append(n)
    ```
 
-   
+
+## Processed Data
+
+| File             | Size   | Lines       | Description                                      | Format                                             |
+| ---------------- | ------ | ----------- | ------------------------------------------------ | -------------------------------------------------- |
+| dev_set_full.zip | 1.43 GB | 79,488     |  Dev set                                   | One JSON per line |
+| train_set_full.zip | 3.34 GB | 185,472     | Train set                            | One JSON per line                                    |
+
+
+# Reference
+
+Our [paper](https://link.springer.com/article/10.1007/s10489-021-02453-9) published in Applied Intelligence.
+
+```
+@article{sun2021lstm,
+  title={LSTM-TC: Bitcoin coin mixing detection method with a high recall},
+  author={Sun, Xiaowen and Yang, Tan and Hu, Bo},
+  journal={Applied Intelligence},
+  pages={1--14},
+  year={2021},
+  publisher={Springer}
+}
+```
 

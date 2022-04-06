@@ -83,13 +83,16 @@ In `tx_features.txt`, `tree_forward.txt` and `tree_back.txt`, the first line ref
    ```
 
 
-## Processed Data
+## Processed Features
 
 | File             | Size   | Lines       | Description                                      | Format                                             |
 | ---------------- | ------ | ----------- | ------------------------------------------------ | -------------------------------------------------- |
 | dev_set_full.zip | 1.43 GB | 79,488     |  Dev set                                   | One JSON per line |
 | train_set_full.zip | 3.34 GB | 185,472     | Train set                            | One JSON per line                                    |
 
+### Load Data
+
+See https://github.com/sxwxs/BitcoinCoinMixingDataSetWithRuleBasedLabel/tree/main/example/LSTM-TC/LSTM-TC_Classifier.ipynb
 
 # Reference
 
